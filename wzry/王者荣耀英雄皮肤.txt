@@ -1,0 +1,61 @@
+英雄资料主页：
+https://pvp.qq.com/web201605/herolist.shtml
+
+
+马超：
+英雄主页：
+https://pvp.qq.com/web201605/herodetail/518.shtml
+
+
+设置到图片的代码：
+<ul class="pic-pf-list pic-pf-list3" data-imgname="冷晖之枪|幸存者">
+    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg" data-title="冷晖之枪"></i>
+        <p>冷晖之枪</p>
+    </li>
+    <li><i><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-2.jpg" data-title="幸存者"></i>
+        <p>幸存者</p>
+    </li>
+</ul>
+
+
+
+第一种形式：
+
+小图：
+https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg
+
+
+手机图（中型图）：
+https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-mobileskin-1.jpg
+
+大图：
+https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-bigskin-1.jpg
+
+--------------------------------------------
+
+手机壁纸（竖向）：
+https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg
+
+
+超大（壁纸）
+https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg
+
+
+-------------------------------------------------------------------------------------
+曜
+https://pvp.qq.com/web201605/herodetail/522.shtml
+
+
+<ul class="pic-pf-list pic-pf-list3" data-imgname="星辰之子|归虚梦演">
+    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-1.jpg" data-title="星辰之子"></i>
+        <p>星辰之子</p>
+    </li>
+    <li><i class=""><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-2.jpg" data-title="归虚梦演"></i>
+        <p>归虚梦演</p>
+    </li>
+</ul>
+
+
+https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-1.jpg
+
+
