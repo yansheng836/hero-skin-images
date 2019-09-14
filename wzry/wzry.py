@@ -8,6 +8,7 @@
 import requests
 import json
 
+
 def mkdirs(path):
     """
     辅助函数：创建文件夹
@@ -40,6 +41,7 @@ def mkdirs(path):
         # 如果目录存在则不创建，并提示目录已存在
         print('文件夹\'' + path + '\'目录已存在！')
         return False
+
 
 def downloadImages():
     """
@@ -123,23 +125,30 @@ def downloadImages():
                     skin_name_lists.index(skin_name_list) + 1) + suffix_url
             wallpaper_bigskin_url = prefix_url2 + '%d' % id + '/' + '%d' % id + bigskin + '%d' % (
                     skin_name_lists.index(skin_name_list) + 1) + suffix_url
-            print('图片地址：' + phone_smallskin_url)
-            print('图片地址：' + phone_mobileskin_url)
-            print('图片地址：' + phone_bigskin_url)
-            print('图片地址：' + wallpaper_mobileskin_url)
-            print('图片地址：' + wallpaper_bigskin_url)
 
-            # 如果返回状态码为200，下载图片
-            if requests.get(phone_bigskin_url).status_code == 200:
-                img = requests.get(phone_bigskin_url)
-                # 定义保存到本地的图片名称，如：廉颇-1-正义爆轰.jpg
-                phone_bigskin_path = phone_bigskin_dirpath+'/%s-%d-%s.jpg' % (
-                    cname, (skin_name_lists.index(skin_name_list) + 1), skin_name_list)
+            # 为方便起见，将对于类型的图片的文件夹和图片url组成 一对字典：
+            url_dict = {
+                phone_smallskin_dirpath: phone_smallskin_url,
+                phone_mobileskin_dirpath: phone_mobileskin_url,
+                phone_bigskin_dirpath: phone_bigskin_url,
+                wallpaper_mobileskin_dirpath: wallpaper_mobileskin_url,
+                wallpaper_bigskin_dirpath: wallpaper_bigskin_url,
+            }
+            # 遍历字典，取出对于值
+            for dirpath in url_dict:
+                # 如果返回状态码为200，下载图片
+                img_url = url_dict[dirpath]
+                if requests.get(img_url).status_code == 200:
+                    print('图片地址：' + img_url)
+                    img = requests.get(img_url)
+                    # 定义保存到本地的图片名称，如：廉颇-1-正义爆轰.jpg
+                    image_path = dirpath + '/%s-%d-%s.jpg' % (
+                        cname, (skin_name_lists.index(skin_name_list) + 1), skin_name_list)
 
-                # print("图片文件名：" + phone_bigskin_path)
-                with open(phone_bigskin_path, 'wb') as f:
-                    f.write(img.content)#写入图片的二进制数据
-                    print('  %s下载成功！'%(phone_bigskin_path))
+                    # print("图片文件名：" + image_path)
+                    with open(image_path, 'wb') as f:
+                        f.write(img.content)  # 写入图片的二进制数据
+                        print('  %s下载成功！' % (image_path))
 
         # 测试时，只下载一个英雄的皮肤图片
         break
