@@ -21,7 +21,7 @@ def mkdirs(path):
     path = path.rstrip("\\")
     '''
     windows下文件名中不能含有：\ / : * ? " < > | 英文的这些字符 ，这里使用"'"、"-"进行替换。
-    \/:?| 用-替换
+    :?| 用-替换
     "<> 用'替换
     '''
     # 对于文件夹，有没有.好像都是同一个文件
@@ -107,7 +107,6 @@ def downloadImages():
         # print(len(skin_name_lists))
         # for skin_name_list in skin_name_lists:  # 打印每一个list中的元素
         # print(skin_name_list)
-
         # print(type(id))
         # 拼接网址
         for skin_name_list in skin_name_lists:
@@ -150,7 +149,7 @@ def downloadImages():
                         f.write(img.content)  # 写入图片的二进制数据
                         print('  %s下载成功！' % (image_path))
 
-        # 测试时，只下载一个英雄的皮肤图片
+        # 测试时，只下载一个英雄的皮肤图片；如需下载所有英雄的皮肤图片，请注释下面的break
         break
 
 
