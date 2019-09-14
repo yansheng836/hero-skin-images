@@ -1,57 +1,57 @@
-Ó¢ĞÛ×ÊÁÏÖ÷Ò³£º
+è‹±é›„èµ„æ–™ä¸»é¡µï¼š
 https://pvp.qq.com/web201605/herolist.shtml
 
 
-Âí³¬£º
-Ó¢ĞÛÖ÷Ò³£º
+é©¬è¶…ï¼š
+è‹±é›„ä¸»é¡µï¼š
 https://pvp.qq.com/web201605/herodetail/518.shtml
 
 
-ÉèÖÃµ½Í¼Æ¬µÄ´úÂë£º
-<ul class="pic-pf-list pic-pf-list3" data-imgname="ÀäêÍÖ®Ç¹|ĞÒ´æÕß">
-    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg" data-title="ÀäêÍÖ®Ç¹"></i>
-        <p>ÀäêÍÖ®Ç¹</p>
+è®¾ç½®åˆ°å›¾ç‰‡çš„ä»£ç ï¼š
+<ul class="pic-pf-list pic-pf-list3" data-imgname="å†·æ™–ä¹‹æª|å¹¸å­˜è€…">
+    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg" data-title="å†·æ™–ä¹‹æª"></i>
+        <p>å†·æ™–ä¹‹æª</p>
     </li>
-    <li><i><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-2.jpg" data-title="ĞÒ´æÕß"></i>
-        <p>ĞÒ´æÕß</p>
+    <li><i><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-2.jpg" data-title="å¹¸å­˜è€…"></i>
+        <p>å¹¸å­˜è€…</p>
     </li>
 </ul>
 
 
 
-µÚÒ»ÖÖĞÎÊ½£º
+ç¬¬ä¸€ç§å½¢å¼ï¼š
 
-Ğ¡Í¼£º
+å°å›¾ï¼š
 https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg
 
 
-ÊÖ»úÍ¼£¨ÖĞĞÍÍ¼£©£º
+æ‰‹æœºå›¾ï¼ˆä¸­å‹å›¾ï¼‰ï¼š
 https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-mobileskin-1.jpg
 
-´óÍ¼£º
+å¤§å›¾ï¼š
 https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-bigskin-1.jpg
 
 --------------------------------------------
 
-ÊÖ»ú±ÚÖ½£¨ÊúÏò£©£º
+æ‰‹æœºå£çº¸ï¼ˆç«–å‘ï¼‰ï¼š
 https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg
 
 
-³¬´ó£¨±ÚÖ½£©
+è¶…å¤§ï¼ˆå£çº¸ï¼‰
 https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg
 
 
 -------------------------------------------------------------------------------------
-ê×
+æ›œ
 https://pvp.qq.com/web201605/herodetail/522.shtml
 
 
-<ul class="pic-pf-list pic-pf-list3" data-imgname="ĞÇ³½Ö®×Ó|¹éĞéÃÎÑİ">
-    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-1.jpg" data-title="ĞÇ³½Ö®×Ó"></i>
-        <p>ĞÇ³½Ö®×Ó</p>
+<ul class="pic-pf-list pic-pf-list3" data-imgname="æ˜Ÿè¾°ä¹‹å­|å½’è™šæ¢¦æ¼”">
+    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-1.jpg" data-title="æ˜Ÿè¾°ä¹‹å­"></i>
+        <p>æ˜Ÿè¾°ä¹‹å­</p>
     </li>
-    <li><i class=""><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-2.jpg" data-title="¹éĞéÃÎÑİ"></i>
-        <p>¹éĞéÃÎÑİ</p>
+    <li><i class=""><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/522/522-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/522/522-bigskin-2.jpg" data-title="å½’è™šæ¢¦æ¼”"></i>
+        <p>å½’è™šæ¢¦æ¼”</p>
     </li>
 </ul>
 
