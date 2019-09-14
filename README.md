@@ -10,6 +10,7 @@ Table of Contents
 
 * [爬取王者荣耀英雄皮肤图片](#%E7%88%AC%E5%8F%96%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E8%8B%B1%E9%9B%84%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87)
   * [思路分析](#%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
+  * [涉及到的知识点](#%E6%B6%89%E5%8F%8A%E5%88%B0%E7%9A%84%E7%9F%A5%E8%AF%86%E7%82%B9)
   * [Json数据说明](#json%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E)
     * [herolist\.json：英雄列表](#herolistjson%E8%8B%B1%E9%9B%84%E5%88%97%E8%A1%A8)
     * [item\.json：英雄装备列表](#itemjson%E8%8B%B1%E9%9B%84%E8%A3%85%E5%A4%87%E5%88%97%E8%A1%A8)
@@ -29,7 +30,11 @@ Table of Contents
 
 这个项目还是比较简单的，因为很多数据都已经json数据中，我们可以很方便的从中取出我们想要的数据。至于下载皮肤图片的主要难点是拼接图片URL，这里有个小坑就是：每张图片都有5种（或者说至少是5种）尺寸的图片，我之前就只发现了其中一种，当然你可以有选择的进行下载；尺寸详见：[皮肤图片尺寸分析](#%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87%E5%B0%BA%E5%AF%B8%E5%88%86%E6%9E%90)。
 
+### 涉及到的知识点
 
+- 使用json库解析json文件。
+- 使用os库创建文件夹。
+- 字符串拼接。
 
 ### Json数据说明
 
@@ -162,9 +167,11 @@ Table of Contents
 | <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg> | 英雄头像         | 67*67    |
 | <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-mobileskin-1.jpg> | 小屏手机英雄背景 | 600*410  |
 | <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-bigskin-1.jpg> | 大屏手机英雄背景 | 1200*530 |
-| **形式二URL--猜测是壁纸**                                    |                  |          |
-| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg> | 手机壁纸         | 727*1071 |
-| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg> | 电脑壁纸         | 1920*882 |
+
+| 形式二URL--猜测是壁纸                                        | 猜测用途 | 图片尺寸 |
+| ------------------------------------------------------------ | ---------------- | -------- |
+| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg> | 手机壁纸 | 727*1071 |
+| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg> | 电脑壁纸 | 1920*882 |
 
 
 
