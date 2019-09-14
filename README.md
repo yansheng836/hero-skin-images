@@ -182,7 +182,7 @@ Table of Contents
 
 2. 依赖：`requests`，`json`，如果没有安装`requests`，用 `pip install requests` 进行安装即可(`json`为内置库)。
 
-3. 使用说明：主程序为：[`./wzry/wzry.py`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py>)，运行该程序会将图片下载在当前目录的五个文件夹内，如[`./wzry/phone-bigskin-images/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/phone-bigskin-images>)；如需下载全部英雄图片，请将程序中的[ `break语句`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py#L153>) 注释掉。
+3. 使用说明：主程序为：[`./wzry/wzry.py`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py>)，运行该程序会将图片下载在当前目录的五个文件夹内，如[`./wzry/phone-bigskin-images/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/phone-bigskin-images>)；如需下载全部英雄图片，请将程序中的[ `break语句`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py#L157>) 注释掉。
 
 ### 结果(数据)分析
 

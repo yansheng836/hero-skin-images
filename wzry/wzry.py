@@ -7,14 +7,12 @@
 # 爬取王者荣耀的英雄皮肤图片
 import requests
 import json
-
+import os
 
 def mkdirs(path):
     """
     辅助函数：创建文件夹
     """
-    # 引入模块
-    import os
     # 去除首末的空格
     path = path.strip()
     # 去除尾部 \ 符号
@@ -133,7 +131,7 @@ def downloadImages():
                 wallpaper_mobileskin_dirpath: wallpaper_mobileskin_url,
                 wallpaper_bigskin_dirpath: wallpaper_bigskin_url,
             }
-            # 遍历字典，取出对于值
+            # 遍历字典，取出对应键值，键：图片保存的目录，值：图片网址
             for dirpath in url_dict:
                 # 如果返回状态码为200，下载图片
                 img_url = url_dict[dirpath]
@@ -144,14 +142,19 @@ def downloadImages():
                     image_path = dirpath + '/%s-%d-%s.jpg' % (
                         cname, (skin_name_lists.index(skin_name_list) + 1), skin_name_list)
 
+                    # 判断文件是否，如果存在就不重复下载，不存在就下载
+                    if os.path.exists(image_path):
+                        print('  %s图片已存在！' % (image_path))
+                        continue
+
                     # print("图片文件名：" + image_path)
+                    # 以二进制形式写文件（下载图片）
                     with open(image_path, 'wb') as f:
                         f.write(img.content)  # 写入图片的二进制数据
                         print('  %s下载成功！' % (image_path))
 
         # 测试时，只下载一个英雄的皮肤图片；如需下载所有英雄的皮肤图片，请注释下面的break
         break
-
 
 if __name__ == '__main__':
     downloadImages()
