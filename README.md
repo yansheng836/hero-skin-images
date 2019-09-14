@@ -18,6 +18,7 @@ Table of Contents
     * [summoner\.json：召唤师技能列表](#summonerjson%E5%8F%AC%E5%94%A4%E5%B8%88%E6%8A%80%E8%83%BD%E5%88%97%E8%A1%A8)
   * [皮肤图片尺寸分析](#%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87%E5%B0%BA%E5%AF%B8%E5%88%86%E6%9E%90)
   * [程序说明](#%E7%A8%8B%E5%BA%8F%E8%AF%B4%E6%98%8E)
+  * [结果(数据)分析](#%E7%BB%93%E6%9E%9C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90)
 * [爬取英雄联盟英雄皮肤图片](#%E7%88%AC%E5%8F%96%E8%8B%B1%E9%9B%84%E8%81%94%E7%9B%9F%E8%8B%B1%E9%9B%84%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87)
 * [License](#license)
 * [声明](#%E5%A3%B0%E6%98%8E)
@@ -183,7 +184,46 @@ Table of Contents
 
 3. 使用说明：主程序为：[`./wzry/wzry.py`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py>)，运行该程序会将图片下载在当前目录的五个文件夹内，如[`./wzry/phone-bigskin-images/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/phone-bigskin-images>)；如需下载全部英雄图片，请将程序中的[ `break语句`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py#L153>) 注释掉。
 
+### 结果(数据)分析
 
+> 1.该文件夹包含了王者荣耀所有英雄的皮肤图片，有5种尺寸。
+>
+> 2.数据汇总（截止：2019年9月14日19:39:23）
+> 英雄数量：95个
+> 皮肤数量：334个（含伴生皮肤）
+>
+> 3.图片尺寸说明：
+>
+> | 文件夹                       | 每张图片尺寸（像素） | 图片大小（KB） | 说明（猜测）     |
+>| ---------------------------- | -------------------- | -------------- | ---------------- |
+> | phone-smallskin-images/      | 67*67                | 20             | 英雄头像         |
+> | phone-mobileskin-images/     | 600*410              | 200            | 小屏手机英雄背景 |
+> | phone-bigskin-images/        | 1200*530             | 450            | 大屏手机英雄背景 |
+> | wallpaper-mobileskin-images/ | 727*1071             | 530            | 手机壁纸         |
+> | wallpaper-bigskin-images/    | 1920*882             | 900            | 电脑壁纸         |
+> 
+> 4.文件夹大小
+>
+> | 文件夹                       | 文件夹大小（MB） |
+>| ---------------------------- | ---------------- |
+> | phone-smallskin-images/      | 2                |
+>| phone-mobileskin-images/     | 34.5             |
+> | phone-bigskin-images/        | 66.8             |
+> | wallpaper-mobileskin-images/ | 60               |
+> | wallpaper-bigskin-images/    | 102              |
+
+
+
+我已将图片全部都下载了，并上传到百度云，有需要可自取。
+
+百度云链接：
+
+> 链接：<https://pan.baidu.com/s/1uFGfSPuKBzYJjEjn6YCx-A> 
+> 提取码：**fd3t**
+> 或者扫描下面的二维码
+> ![王者荣耀英雄皮肤图片-fd3t](https://s2.ax1x.com/2019/09/14/n67zFS.png)
+
+---
 
 ## 爬取英雄联盟英雄皮肤图片
 
