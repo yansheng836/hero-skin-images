@@ -7,7 +7,7 @@ https://pvp.qq.com/web201605/herolist.shtml
 https://pvp.qq.com/web201605/herodetail/518.shtml
 
 
-设置到图片的代码：
+设计到图片的代码：
 <ul class="pic-pf-list pic-pf-list3" data-imgname="冷晖之枪|幸存者">
     <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg" data-title="冷晖之枪"></i>
         <p>冷晖之枪</p>
