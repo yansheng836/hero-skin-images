@@ -9,6 +9,7 @@ import requests
 import json
 import os
 
+
 def mkdirs(path):
     """
     辅助函数：创建文件夹
@@ -98,30 +99,38 @@ def downloadImages():
         id = i['ename']  # 英雄id
         cname = i['cname']  # 英雄名
         title = i['title']  # 默认皮肤，即第一个皮肤
-        skin_name = i['skin_name']  # 皮肤名
-        # print('id:%s,cname:%s,title:%s,skin_name:%s'%(id,cname,title,skin_name))
-        skin_name_lists = skin_name.split('|')  # 把字符串编程列表，用|做分隔符
-        # print(skin_name_lists)
-        # print(len(skin_name_lists))
-        # for skin_name_list in skin_name_lists:  # 打印每一个list中的元素
-        # print(skin_name_list)
-        # print(type(id))
+        # 判断该英雄是否有skin_name属性（新英雄可能会没有），有就取值，没有就直接将列表置为空
+        skin_name_lists = []
+        if 'skin_name' in i.keys():
+            skin_name = i['skin_name']  # 皮肤名
+            skin_name_lists = skin_name.split('|')  # 把字符串变成列表，用|做分隔符
+            # 记录英雄的title和skin_name的第一个属性不一样的英雄的id
+            diff_ids = [109, 113, 176]
+            if id in diff_ids:
+                skins_lists = [title] + skin_name_lists[1:]
+            else:
+                skins_lists = [title] + skin_name_lists
+        else:
+            skins_lists = [title]
+        # 将title 和skin_name_lists合并为列表，然后转为集合，自动去重,
+        # 同时保证顺序不变，因为需要设置第一个为伴生皮肤
+        skins_set_lists = list(set(skins_lists))
+        skins_set_lists.sort(key=skins_lists.index)
+
         # 拼接网址
-        for skin_name_list in skin_name_lists:
+        for skin in skins_set_lists:
+            # 获取下标，作为英雄皮肤数量
+            index = skins_set_lists.index(skin) + 1
             # skin_name_lists.index(skin_name_list)为列表的下标
             # https://game.gtimg.cn/images/yxzj/img201606/heroimg/ + 105 + '/ '+ 105 + '-smallskin-' + 1 + '.jpg'
             # 类型1
-            phone_smallskin_url = prefix_url1 + '%d' % id + '/' + '%d' % id + smallskin + '%d' % (
-                    skin_name_lists.index(skin_name_list) + 1) + suffix_url
-            phone_mobileskin_url = prefix_url1 + '%d' % id + '/' + '%d' % id + mobileskin + '%d' % (
-                    skin_name_lists.index(skin_name_list) + 1) + suffix_url
-            phone_bigskin_url = prefix_url1 + '%d' % id + '/' + '%d' % id + bigskin + '%d' % (
-                    skin_name_lists.index(skin_name_list) + 1) + suffix_url
+            mid_url = '%d' % id + '/' + '%d' % id
+            phone_smallskin_url = prefix_url1 + mid_url + smallskin + '%d' % index + suffix_url
+            phone_mobileskin_url = prefix_url1 + mid_url + mobileskin + '%d' % index + suffix_url
+            phone_bigskin_url = prefix_url1 + mid_url + bigskin + '%d' % index + suffix_url
             # 类型2
-            wallpaper_mobileskin_url = prefix_url2 + '%d' % id + '/' + '%d' % id + mobileskin + '%d' % (
-                    skin_name_lists.index(skin_name_list) + 1) + suffix_url
-            wallpaper_bigskin_url = prefix_url2 + '%d' % id + '/' + '%d' % id + bigskin + '%d' % (
-                    skin_name_lists.index(skin_name_list) + 1) + suffix_url
+            wallpaper_mobileskin_url = prefix_url2 + mid_url + mobileskin + '%d' % index + suffix_url
+            wallpaper_bigskin_url = prefix_url2 + mid_url + bigskin + '%d' % index + suffix_url
 
             # 为方便起见，将对于类型的图片的文件夹和图片url组成 一对字典：
             url_dict = {
@@ -133,28 +142,29 @@ def downloadImages():
             }
             # 遍历字典，取出对应键值，键：图片保存的目录，值：图片网址
             for dirpath in url_dict:
-                # 如果返回状态码为200，下载图片
+                # 定义保存到本地的图片名称，如：廉颇-1-正义爆轰.jpg
+                image_path = dirpath + '/%s-%d-%s.jpg' % (cname, index, skin)
+                # print("图片文件名：" + image_path)
+                # 将判断放到前面，进行优化
+                # 判断文件（图片）是否存在，如果存在就不重复下载，不存在就下载
+                if os.path.exists(image_path):
+                    print(' ' + image_path + '图片已存在！')
+                    continue
+
+                # 获取图片的网址，如果返回状态码为200，下载图片
                 img_url = url_dict[dirpath]
                 if requests.get(img_url).status_code == 200:
                     print('图片地址：' + img_url)
                     img = requests.get(img_url)
-                    # 定义保存到本地的图片名称，如：廉颇-1-正义爆轰.jpg
-                    image_path = dirpath + '/%s-%d-%s.jpg' % (
-                        cname, (skin_name_lists.index(skin_name_list) + 1), skin_name_list)
 
-                    # 判断文件是否，如果存在就不重复下载，不存在就下载
-                    if os.path.exists(image_path):
-                        print('  %s图片已存在！' % (image_path))
-                        continue
-
-                    # print("图片文件名：" + image_path)
                     # 以二进制形式写文件（下载图片）
                     with open(image_path, 'wb') as f:
                         f.write(img.content)  # 写入图片的二进制数据
-                        print('  %s下载成功！' % (image_path))
+                        print(' ' + image_path + '下载成功！')
 
         # 测试时，只下载一个英雄的皮肤图片；如需下载所有英雄的皮肤图片，请注释下面的break
         break
+
 
 if __name__ == '__main__':
     downloadImages()
