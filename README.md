@@ -1,6 +1,8 @@
 Hero-Skin-Images
 ======
 
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](<https://github.com/yansheng836/hero-skin-images>)
+
 爬取王者荣耀和英雄联盟的英雄的皮肤图片。
 
 ---
