@@ -1,0 +1,16 @@
+<ul class="pic-pf-list pic-pf-list3" data-imgname="流云之翼|荷鲁斯之眼">
+    <li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/506/506-smallskin-1.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/506/506-bigskin-1.jpg" data-title="流云之翼"></i>
+        <p>流云之翼</p>
+    </li>
+    <li><i class=""><img src="//game.gtimg.cn/images/yxzj/img201606/heroimg/506/506-smallskin-2.jpg" alt="" data-imgname="//game.gtimg.cn/images/yxzj/img201606/skin/hero-info/506/506-bigskin-2.jpg" data-title="荷鲁斯之眼"></i>
+        <p>荷鲁斯之眼</p>
+    </li>
+</ul>
+
+网页代码内容（注:什么的是具体显示的结果）：动态加载数据，反爬虫机制，选择器会找不到具体标签
+<ul class="pic-pf-list pic-pf-list3" data-imgname="流云之翼|荷鲁斯之眼">
+    <!--<li><i class="curr"><img src="//game.gtimg.cn/images/yxzj/web201605/page/pf_pic1.jpg" alt="皮肤名称" /></i><p>皮肤名称</p></li>
+                        <li><i><img src="//game.gtimg.cn/images/yxzj/web201605/page/pf_pic2.jpg" alt="皮肤名称" /></i><p>皮肤名称</p></li>
+                        <li><i><img src="//game.gtimg.cn/images/yxzj/web201605/page/pf_pic3.jpg" alt="皮肤名称" /></i><p>皮肤名称</p></li>
+                        <li><i><img src="//game.gtimg.cn/images/yxzj/web201605/page/pf_pic4.jpg" alt="皮肤名称" /></i><p>皮肤名称</p></li>-->
+</ul>
