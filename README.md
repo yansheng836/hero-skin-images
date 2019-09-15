@@ -190,9 +190,9 @@ Table of Contents
 >
 > 2.数据汇总（截止：2019年9月14日19:39:23）
 > 英雄数量：95个
-> 皮肤数量：334个（含伴生皮肤）
+> 皮肤数量：338个（含伴生皮肤）
 >
-> 3.图片尺寸说明：
+> 3.图片尺寸说明（图片尺寸和大小应该是在一定范围内变化，不是定值，以下数据仅供参考）：
 >
 > | 文件夹                       | 每张图片尺寸（像素） | 图片大小（KB） | 说明（猜测）     |
 >| ---------------------------- | -------------------- | -------------- | ---------------- |
@@ -207,10 +207,10 @@ Table of Contents
 > | 文件夹                       | 文件夹大小（MB） |
 >| ---------------------------- | ---------------- |
 > | phone-smallskin-images/      | 2                |
->| phone-mobileskin-images/     | 34.5             |
-> | phone-bigskin-images/        | 66.8             |
-> | wallpaper-mobileskin-images/ | 60               |
-> | wallpaper-bigskin-images/    | 102              |
+>| phone-mobileskin-images/     | 34.6             |
+> | phone-bigskin-images/        | 68               |
+> | wallpaper-mobileskin-images/ | 61               |
+> | wallpaper-bigskin-images/    | 105              |
 
 
 
