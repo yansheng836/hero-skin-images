@@ -33,7 +33,9 @@ Table of Contents
 
 ### 涉及到的知识点
 
-- 使用json库解析json文件。
+- 使用requests库进行网络连接，获取网址数据。
+
+- 使用json库解析json文件（数据）。
 - 使用os库创建文件夹。
 - 字符串拼接。
 
@@ -75,6 +77,8 @@ Table of Contents
     }
 ]
 ```
+
+4. 存在问题并已经进行处理，详见：[存在问题及解决方案](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/存在问题及解决方案.md>)。
 
 #### `item.json`：英雄装备列表
 
@@ -182,17 +186,19 @@ Table of Contents
 
 2. 依赖：`requests`，`json`，如果没有安装`requests`，用 `pip install requests` 进行安装即可(`json`为内置库)。
 
-3. 使用说明：主程序为：[`./wzry/wzry.py`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py>)，运行该程序会将图片下载在当前目录的五个文件夹内，如[`./wzry/phone-bigskin-images/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/phone-bigskin-images>)；如需下载全部英雄图片，请将程序中的[ `break语句`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py#L157>) 注释掉。
+3. 使用说明：主程序为：[`./wzry/wzry.py`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py>)，运行该程序会将图片下载在当前目录的五个文件夹内，如[`./wzry/phone-bigskin-images/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/phone-bigskin-images>)；如需下载全部英雄图片，请将程序中的[ `break语句`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/wzry.py#L166>) 注释掉。
 
 ### 结果(数据)分析
+
+注：因为该程序是解析json文件获得对应英雄的信息，但是仔细观察后，发现该数据稍有滞后，有部分数据还未进行更新；故该数据非最新数据，仅供参考。（如需要获得最新数据就需要爬取网页元素进行分析，有兴趣者可自行扩展）
 
 > 1.该文件夹包含了王者荣耀所有英雄的皮肤图片，有5种尺寸。
 >
 > 2.数据汇总（截止：2019年9月14日19:39:23）
 > 英雄数量：95个
-> 皮肤数量：334个（含伴生皮肤）
+> 皮肤数量：338个（含伴生皮肤）
 >
-> 3.图片尺寸说明：
+> 3.图片尺寸说明（图片尺寸和大小应该是在一定范围内变化，不是定值，以下数据仅供参考）：
 >
 > | 文件夹                       | 每张图片尺寸（像素） | 图片大小（KB） | 说明（猜测）     |
 >| ---------------------------- | -------------------- | -------------- | ---------------- |
@@ -207,10 +213,10 @@ Table of Contents
 > | 文件夹                       | 文件夹大小（MB） |
 >| ---------------------------- | ---------------- |
 > | phone-smallskin-images/      | 2                |
->| phone-mobileskin-images/     | 34.5             |
-> | phone-bigskin-images/        | 66.8             |
-> | wallpaper-mobileskin-images/ | 60               |
-> | wallpaper-bigskin-images/    | 102              |
+>| phone-mobileskin-images/     | 34.6             |
+> | phone-bigskin-images/        | 68               |
+> | wallpaper-mobileskin-images/ | 61               |
+> | wallpaper-bigskin-images/    | 105              |
 
 
 
