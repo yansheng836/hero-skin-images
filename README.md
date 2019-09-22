@@ -1,14 +1,12 @@
-Hero-Skin-Images
-======
+# Hero-Skin-Images
 
-[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](<https://github.com/yansheng836/hero-skin-images>)
+[![Automated Release Notes by gren](https://img.shields.io/badge/%F0%9F%A4%96-release%20notes-00B2EE.svg)](https://github.com/yansheng836/hero-skin-images)
 
 爬取王者荣耀和英雄联盟的英雄的皮肤图片。
 
 ---
 
-Table of Contents
-=================
+# Table of Contents
 
 * [爬取王者荣耀英雄皮肤图片](#%E7%88%AC%E5%8F%96%E7%8E%8B%E8%80%85%E8%8D%A3%E8%80%80%E8%8B%B1%E9%9B%84%E7%9A%AE%E8%82%A4%E5%9B%BE%E7%89%87)
   * [思路分析](#%E6%80%9D%E8%B7%AF%E5%88%86%E6%9E%90)
@@ -36,7 +34,6 @@ Table of Contents
 ### 涉及到的知识点
 
 - 使用requests库进行网络连接，获取网址数据。
-
 - 使用json库解析json文件（数据）。
 - 使用os库创建文件夹。
 - 字符串拼接。
@@ -45,13 +42,9 @@ Table of Contents
 
 我已经将可能有用的json文件都下载了，并且进行了格式化（转换编码为utf8）,放在了[`./wzry/json数据/`](<https://github.com/yansheng836/hero-skin-images/tree/master/wzry/json数据>)文件夹下。或者你可以到下面提到的链接中取下载对应的文件（访问json文件URL会自动下载）。
 
-
-
 英雄列表介绍主页：<https://pvp.qq.com/web201605/herolist.shtml>，有`herolist.json`。
 
 某个英雄具体介绍主页，如：<https://pvp.qq.com/web201605/herodetail/518.shtml>，有其他三个文件。
-
-
 
 #### `herolist.json`：英雄列表
 
@@ -159,8 +152,6 @@ Table of Contents
 ]
 ```
 
-
-
 ### 皮肤图片尺寸分析
 
 英雄皮肤图片信息只涉及到 [`herolist.json`](<https://github.com/yansheng836/hero-skin-images/blob/master/wzry/json数据/herolist.json>) 数据，目前发现图片有5种尺寸，注意：下面的图片大小只是对应英雄的图片尺寸，猜测不是固定的，而是在一定范围内变化。
@@ -171,16 +162,14 @@ Table of Contents
 
 | 形式一URL--猜测用于手机端显示                                | 猜测用途         | 图片尺寸 |
 | ------------------------------------------------------------ | ---------------- | -------- |
-| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg> | 英雄头像         | 67*67    |
-| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-mobileskin-1.jpg> | 小屏手机英雄背景 | 600*410  |
-| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-bigskin-1.jpg> | 大屏手机英雄背景 | 1200*530 |
+| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-smallskin-1.jpg> | 英雄头像         | 67-67    |
+| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-mobileskin-1.jpg> | 小屏手机英雄背景 | 600-410  |
+| <https://game.gtimg.cn/images/yxzj/img201606/heroimg/518/518-bigskin-1.jpg> | 大屏手机英雄背景 | 1200-530 |
 
 | 形式二URL--猜测是壁纸                                        | 猜测用途 | 图片尺寸 |
 | ------------------------------------------------------------ | ---------------- | -------- |
-| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg> | 手机壁纸 | 727*1071 |
-| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg> | 电脑壁纸 | 1920*882 |
-
-
+| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-mobileskin-1.jpg> | 手机壁纸 | 727-1071 |
+| <https://game.gtimg.cn/images/yxzj/img201606/skin/hero-info/518/518-bigskin-1.jpg> | 电脑壁纸 | 1920-882 |
 
 ### 程序说明
 
@@ -203,7 +192,7 @@ Table of Contents
 > 3.图片尺寸说明（图片尺寸和大小应该是在一定范围内变化，不是定值，以下数据仅供参考）：
 >
 > | 文件夹                       | 每张图片尺寸（像素） | 图片大小（KB） | 说明（猜测）     |
->| ---------------------------- | -------------------- | -------------- | ---------------- |
+> | ---------------------------- | -------------------- | -------------- | ---------------- |
 > | phone-smallskin-images/      | 67*67                | 20             | 英雄头像         |
 > | phone-mobileskin-images/     | 600*410              | 200            | 小屏手机英雄背景 |
 > | phone-bigskin-images/        | 1200*530             | 450            | 大屏手机英雄背景 |
@@ -213,14 +202,12 @@ Table of Contents
 > 4.文件夹大小
 >
 > | 文件夹                       | 文件夹大小（MB） |
->| ---------------------------- | ---------------- |
+> | ---------------------------- | ---------------- |
 > | phone-smallskin-images/      | 2                |
->| phone-mobileskin-images/     | 34.6             |
+> | phone-mobileskin-images/     | 34.6             |
 > | phone-bigskin-images/        | 68               |
 > | wallpaper-mobileskin-images/ | 61               |
 > | wallpaper-bigskin-images/    | 105              |
-
-
 
 我已将图片全部都下载了，并上传到百度云，有需要可自取。
 
@@ -237,12 +224,9 @@ Table of Contents
 
 待续。
 
-
-
 ## License
 
 This work is licensed under a [MIT](https://github.com/yansheng836/hero-skin-images/blob/master/LICENSE.txt).
-
 
 ## 声明
 
